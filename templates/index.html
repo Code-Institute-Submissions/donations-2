@@ -1,0 +1,298 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Dark Admin</title>
+
+    <link rel="stylesheet" href="../static/lib/css/bootstrap.min.css">
+   <link rel="stylesheet" href="../static/lib/css/keen-dashboards.css">
+   <link rel="stylesheet" href="../static/lib/css/dc.css">
+   <link rel="stylesheet" href="../static/css/custom.css">
+{##}
+   <link rel="stylesheet" type="text/css" href="../static/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../static/font-awesome(t)/css/font-awesome.min.css" />
+{#    <link rel="stylesheet" type="text/css" href="../static/css(t)/local.css" />#}
+    <link rel="stylesheet" href="../static/lib/css/introjs.css" />
+
+    <script type="text/javascript" src="/static/js/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="/static/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- you need to include the shieldui css and js assets in order for the charts to work -->
+    <link rel="stylesheet" type="text/css" href="http://www.shieldui.com/shared/components/latest/css/light-bootstrap/all.min.css" />
+    <link id="gridcss" rel="stylesheet" type="text/css" href="http://www.shieldui.com/shared/components/latest/css/dark-bootstrap/all.min.css" />
+
+{#    <script type="text/javascript" src="http://www.shieldui.com/shared/components/latest/js/shieldui-all.min.js"></script>#}
+{#    <script type="text/javascript" src="http://www.prepbootstrap.com/Content/js/gridData.js"></script>#}
+<style>
+    h3 {
+        text-align: center;
+        color: red;
+    }
+
+    body {
+
+        background-color: blue;
+    }
+    .donor {
+        height: 120px;
+        margin: 0 auto;
+        margin-left: 50px;
+        width: 100%;
+
+    }
+    .chart-title {
+        background-color: yellow;
+    }
+    .numDon {
+        background-color: white;
+    }
+
+    .chart-stage {
+       background: #33CC99;
+        position: relative;
+        margin:0 auto;
+        font-size: 29px;
+        color: white;
+        vertical-align: middle;
+        text-align: center;
+        padding-top: 12px;
+        padding-bottom: 0px
+    }
+
+</style>
+
+
+
+</head>
+<body>
+    <div id="wrapper">
+          <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <div class="navbar-header">
+                 <button class="intro_button" type="button" autofocus onclick="javascript:introJs().start();">Start Tour!</button>
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">Admin Panel</a>
+            </div>
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+                <ul id="active" class="nav navbar-nav side-nav">
+                    <li class="selected"><a href="index.html"><i class="fa fa-bullseye"></i> Dashboard</a></li>
+{#                    <li><a href="portfolio.html"><i class="fa fa-tasks"></i> Portfolio</a></li>#}
+{#                    <li><a href="blog.html"><i class="fa fa-globe"></i> Blog</a></li>#}
+                    <li><a href="signup.html"><i class="fa fa-list-ol"></i>SignUp</a></li>
+                    <li><a href="register.html"><i class="fa fa-font"></i> Register</a></li>
+{#                    <li><a href="timeline.html"><i class="fa fa-font"></i> Timeline</a></li>#}
+{#                    <li><a href="forms.html"><i class="fa fa-list-ol"></i> Forms</a></li>#}
+                    
+                </ul>
+
+            </div>
+        </nav>
+
+        <div id="page-wrapper">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1>Project <small>Dashboard and Graphs</small></h1>
+                    <div class="alert alert-dismissable alert-warning">
+                        <button data-dismiss="alert" class="close" type="button">&times;</button>
+
+                        <img class="donor" src="../static/images/DonorsChoose-org-logo.png">
+                        <br />
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+
+               <!-- Time Chart -->
+{#            </div>#}
+
+                  <!-- Time Chart -->
+        <div class="row">
+               <div class="col-md-6">
+                   <div class="chart-wrapper">
+                       <div class="chart-title numDon">
+                          <h3> Number of Donations </h3>
+                       </div>
+                       <div class="chart-stage" data-step="1">
+
+
+                           <div id="time-chart"></div>
+                       </div>
+                   </div>
+               </div>
+               <!-- Time Chart -->
+
+
+        <div class="col-md-6">
+         <div class="chart-wrapper">
+            <div class="chart-title">
+                <h3>Total Donations by state</h3>
+                 <div id="menu-select">
+
+                   </div>
+            </div>
+            <div class="chart-stage map">
+                <div id="funding-map" data-step="2"
+                     data-intro="Mapping donations by state"
+                     style="font-weight: normal" data-position="left"></div>
+
+            </div>
+        </div>
+            </div>
+
+    </div>
+
+
+
+        <div class=row">
+            <!-- Resources -->
+               <div class="col-md-4">
+                   <div class="chart-wrapper">
+                       <div class="chart-title">
+                           <h3>Resources Type</h3>
+                       </div>
+                       <div class="chart-stage">
+                           <div id="resource-type-row-chart"></div>
+                       </div>
+                   </div>
+               </div>
+               <!-- Resources -->
+
+                 <!-- funding Pie -->
+               <div class="col-md-4">
+                   <div class="chart-wrapper">
+                       <div class="chart-title">
+                           <h3>Funding Status</h3>
+                       </div>
+                       <div class="chart-stage">
+                           <div id="funding-chart">
+
+                           </div>
+                       </div>
+                   </div>
+               </div>
+               <!-- funding Pie -->
+
+                 <!-- Poverty -->
+                <div class="col-md-4">
+                   <div class="chart-wrapper">
+                        <div class="chart-title">
+                           <h3> Poverty Level</h3>
+                        </div>
+                    <div class="chart-stage">
+                        <div id="poverty-level-row-chart">
+
+                        </div>
+                     </div>
+                 </div>
+                </div>
+        </div>
+       <!-- Poverty -->
+
+
+
+                 <!-- Metric 1 -->
+                <div class="col-md-4">
+                    <div class="chart-wrapper">
+                        <div class="chart-title">
+                            <h3>Total Number of Donations</h3>
+                    </div>
+                        <div class="chart-stage">
+                            <div id="number-projects-nd"></div>
+                        </div>
+
+                     </div>
+                </div>
+       <!-- Metric 1 -->
+
+                 <!-- Metric 2 -->
+                <div class="col-md-4">
+                     <div class="chart-wrapper">
+                         <div class="chart-title">
+                             <h3>Total Donations in USD</h3>
+                         </div>
+                     <div class="chart-stage">
+                            <div id="total-donations-nd">
+
+                         </div>
+                     </div>
+                     </div>
+              </div>
+            </div>
+       <!-- Metric 2 -->
+
+                <!-- funding Pie -->
+        <div class="col-md-3">
+                   <div class="chart-wrapper">
+                       <div class="chart-title">
+                           <h3>Primary Focus Area</h3>
+                       </div>
+                       <div class="chart-stage">
+                              <div id="primaryfocusarea"></div>
+                       </div>
+                   </div>
+               </div>
+               <!-- funding Pie -->
+
+                <!-- funding Pie -->
+        <div class="col-md-3">
+                   <div class="chart-wrapper">
+                       <div class="chart-title">
+                           <h3>Primary Focus Subject</h3>
+                       </div>
+                       <div class="chart-stage">
+                           <div id="primaryfocussubject"></div>
+
+                       </div>
+
+                   </div>
+               </div>
+               <!-- funding Pie -->
+
+         <div class="col-md-3">
+                   <div class="chart-wrapper">
+                       <div class="chart-title">
+                           <h3>Grade Level</h3>
+                       </div>
+                       <div class="chart-stage">
+                           <div id="grade-level"></div>
+
+                       </div>
+
+                   </div>
+               </div>
+               <!-- funding Pie -->
+
+
+
+
+
+
+</div>
+
+
+
+    <script src="../static/lib/js/jquery.min.js"></script>
+    <script src="../static/lib/js/bootstrap.min.js"></script>
+    <script src="../static/lib/js/crossfilter.js"></script>
+    <script src="../static/lib/js/d3.js"></script>
+    <script src="../static/lib/js/dc.js"></script>
+    <script src="../static/lib/js/queue.js"></script>
+    <script src="../static/lib/js/keen.min.js"></script>
+    <script src='../static/js/graph.js' type='text/javascript'></script>
+    <script src="../static/lib/js/intro.js" type="text/javascript"></script>
+
+
+
+
+</body>
+</html>
