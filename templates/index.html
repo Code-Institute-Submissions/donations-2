@@ -111,7 +111,7 @@
                     <div class="alert alert-dismissable alert-warning">
                         <button data-dismiss="alert" class="close" type="button">&times;</button>
 
-                        <img class="donor" src="../static/images/DonorsChoose-org-logo.png">
+                        <img class="donor" src="../static/Images/DonorsChoose-org-logo.png">
                         <br />
 
                     </div>
@@ -290,7 +290,8 @@
               <button class="button">Read More</button>
         <br>
 {#    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis eaque quam reprehenderit? Ad autem excepturi laborum nam nihil similique? Commodi consequuntur doloribus, excepturi fugiat minus nemo qui sequi sint unde.</p>#}
-    <p style="display: none">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci aliquam atque cum dolor ea est facere fugit harum maxime, natus nisi officia pariatur, possimus quis ratione repellat temporibus totam, voluptates.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci aliquam atque cum dolor ea est facere fugit harum maxime, natus nisi officia pariatur, possimus quis ratione repellat temporibus totam, voluptates.</p>
+        <img class="donor" src="../static/Images/DonorsChoose-org-logo.png">
         </div>
 {#            </div>#}
 {##}
@@ -312,8 +313,8 @@
     <script src="../static/lib/js/intro.js" type="text/javascript"></script>
 
 <script>
-    $("button").click(function () {
-        $("p").show()
+    $(".button").click(function () {
+        $(".donor").toggle()
     });
 </script>
 
