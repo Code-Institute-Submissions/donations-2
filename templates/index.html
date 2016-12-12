@@ -286,9 +286,10 @@
 
 {#    <div class="container">#}
 {#        <div class="row">#}
-    <div class="col-lg-12 wrapper">
+{#    <div class="col-lg-12 wrapper">#}
 
-              <button class="read">Read More</button>
+             <input type="button" value="Hide Info" class="button-hide" />
+             <input type="button" value="Show info" class="button-show" />
         <br>
         <br>
         <br>
@@ -329,8 +330,12 @@
     <script src="../static/lib/js/intro.js" type="text/javascript"></script>
 
 <script>
-    $(".read").click(function () {
-        $(".info").show()
+    $(".button-show").click(function () {
+        $(".info").show();
+    });
+    
+    $(".button-hide").click(function () {
+       $(".info").hide();
     });
 </script>
 
