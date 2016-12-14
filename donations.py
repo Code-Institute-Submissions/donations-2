@@ -16,7 +16,7 @@ DBS_NAME = 'heroku_pxh82b97'
 # DBS_NAME = 'donorsUSA'
 # COLLECTION_NAME = 'projects'
 #DBS_NAME = os.getenv('MONGO_DB_NAME','donorsUSA')
-COLLECTION_NAME = 'projects'
+COLLECTION_NAME = 'Projects'
 FIELDS = {'funding_status': True, 'school_state': True, 'resource_type': True, 'poverty_level': True,
           'date_posted': True, 'total_donations': True,'primary_focus_area': True,'primary_focus_subject': True,'grade_level': True, '_id': False}
 
