@@ -62,7 +62,7 @@ function makeGraphs(error, projectsJson,statesJson) {
    var numProjectsByResourceType = resourceTypeDim.group();
    var numProjectsByPovertyLevel = povertyLevelDim.group();
    var numProjectsByFundingStatus = fundingStatus.group();
-    var PrimaryFocusArea = primaryFocusArea.group();
+    var numProjectsPrimaryFocusArea = primaryFocusArea.group();
     var GradeLevel = gradeLevel.group();
     var PrimaryFocusSubject = primaryFocusSubject.group();
    var totalDonationsByState = stateDim.group().reduceSum(function (d) {
@@ -91,7 +91,7 @@ function makeGraphs(error, projectsJson,statesJson) {
    var fundingStatusChart = dc.pieChart("#funding-chart");
     var fundingStatusmap = dc.geoChoroplethChart("#funding-map");
     var gradeLevelChart = dc.pieChart("#grade-level");
-    var primaryfocusareaChart = dc.pieChart("#primaryfocusarea");
+    var primaryFocusAreaChart = dc.pieChart("#primary-focus-area-chart");
      var primaryfocusSubjectChart = dc.pieChart("#primaryfocussubject");
 
 
@@ -150,13 +150,13 @@ function makeGraphs(error, projectsJson,statesJson) {
        .dimension(fundingStatus)
        .group(numProjectsByFundingStatus);
 
-     primaryfocusareaChart
+     primaryFocusAreaChart
        .height(220)
        .radius(90)
        .innerRadius(40)
        .transitionDuration(1500)
        .dimension(primaryFocusArea)
-       .group(PrimaryFocusArea);
+       .group(numProjectsPrimaryFocusArea);
 
      gradeLevelChart
        .height(220)
