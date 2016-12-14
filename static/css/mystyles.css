@@ -1,0 +1,17 @@
+ h3 {
+        text-align: center;
+        color: red;
+    }
+
+    body {
+
+        background-color: black;
+    }
+
+     .chart-title {
+        background-color: yellow;
+    }
+
+     .chart-stage {
+         background-color: purple;
+     }
