@@ -4,20 +4,16 @@
     }
 
     body {
-
-        background-color: white;
-
+        /*background-color: blue;*/
     }
 
      .chart-title {
-        background-color: black;
+        /*background-color: black;*/
          color: red;
          font-weight:bold;
-
     }
 
     .chart-stage {
-       background: green;
         position: relative;
         margin:0 auto;
         font-size: 29px;
@@ -26,11 +22,6 @@
         text-align: center;
         padding-top: 12px;
         padding-bottom: 0px
-    }
-
-    .button {
-        margin: auto;
-        display: block;
     }
 
     .chart-wrapper {
