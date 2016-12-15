@@ -54,3 +54,17 @@
     margin-left: 450px;
    }
 
+   .title {
+       font-size: 20px;
+       text-align: center;
+       color: blue;
+   }
+
+   .intro_button {
+       float: right;
+       height: 20px;
+       width:40px;
+
+   }
+
+
