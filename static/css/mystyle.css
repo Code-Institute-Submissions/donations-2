@@ -14,6 +14,7 @@
     }
 
     .chart-stage {
+        background-color: greenyellow;
         position: relative;
         margin:0 auto;
         font-size: 29px;
@@ -22,6 +23,7 @@
         text-align: center;
         padding-top: 12px;
         padding-bottom: 0px
+
     }
 
     .chart-wrapper {
