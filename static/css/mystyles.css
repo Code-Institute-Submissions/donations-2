@@ -17,6 +17,7 @@
     }
 
     .chart-stage {
+        background-color: black;
         background: black;
         position: relative;
         margin:0 auto;
