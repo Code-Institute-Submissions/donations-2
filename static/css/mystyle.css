@@ -42,3 +42,9 @@
        text-align: center;
    }
 
+   .donor {
+       display: block;
+       margin-left: auto;
+       margin-right: auto;
+   }
+
