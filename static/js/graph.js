@@ -58,17 +58,17 @@ function makeGraphs(error, projectsJson,statesJson) {
 
 
    //Calculate metrics
-   var numProjectsByDate = dateDim.group();
-   var numProjectsByResourceType = resourceTypeDim.group();
-   var numProjectsByPovertyLevel = povertyLevelDim.group();
-   var numProjectsByFundingStatus = fundingStatus.group();
-    var numProjectsPrimaryFocusArea = primaryFocusArea.group();
-    var numProjectsGradeLevel = gradeLevel.group();
-    var numProjectsPrimaryFocusSubject = primaryFocusSubject.group();
-   var totalDonationsByState = stateDim.group().reduceSum(function (d) {
-       return d["total_donations"];
-   });
-   var stateGroup = stateDim.group();
+    var numProjectsByDate = dateDim.group();
+    var numProjectsByResourceType = resourceTypeDim.group();
+    var numProjectsByPovertyLevel = povertyLevelDim.group();
+    var numProjectsByFundingStatus = fundingStatus.group();
+    var numProjectsByPrimaryFocusArea = primaryFocusArea.group();
+    var numProjectsByGradeLevel = gradeLevel.group();
+    var numProjectsByPrimaryFocusSubject = primaryFocusSubject.group();
+    var totalDonationsByState = stateDim.group().reduceSum(function (d) {
+        return d["total_donations"];
+    });
+    var stateGroup = stateDim.group();
 
 
    var all = ndx.groupAll();
@@ -164,7 +164,7 @@ function makeGraphs(error, projectsJson,statesJson) {
        .innerRadius(40)
        .transitionDuration(1500)
        .dimension(primaryFocusArea)
-       .group(numProjectsPrimaryFocusSubject)
+       .group(numProjectsPrimaryFocusSubject);
 
      gradeLevelChart
        .height(220)
