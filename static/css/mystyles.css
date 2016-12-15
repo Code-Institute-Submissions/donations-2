@@ -33,3 +33,10 @@
         margin: auto;
         display: block;
     }
+
+    .styled {
+        background-color: green;
+        border: 5px solid red;
+        color: white;
+        
+    }
