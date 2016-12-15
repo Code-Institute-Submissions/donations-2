@@ -34,9 +34,6 @@
         display: block;
     }
 
-    .styled {
-        background-color: green;
+    .chart-wrapper {
         border: 5px solid red;
-        color: white;
-        
     }
