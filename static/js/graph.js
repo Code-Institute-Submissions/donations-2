@@ -83,20 +83,20 @@ function makeGraphs(error, projectsJson,statesJson) {
    var maxDate = dateDim.top(1)[0]["date_posted"];
 
    //Charts
-   var timeChart = dc.barChart("#time-chart");
-   var resourceTypeChart = dc.rowChart("#resource-type-row-chart");
-   var povertyLevelChart = dc.rowChart("#poverty-level-row-chart");
-   var numberProjectsND = dc.numberDisplay("#number-projects-nd");
-   var totalDonationsND = dc.numberDisplay("#total-donations-nd");
-   var fundingStatusChart = dc.pieChart("#funding-chart");
+    var timeChart = dc.barChart("#time-chart");
+    var resourceTypeChart = dc.rowChart("#resource-type-row-chart");
+    var povertyLevelChart = dc.rowChart("#poverty-level-row-chart");
+    var numberProjectsND = dc.numberDisplay("#number-projects-nd");
+    var totalDonationsND = dc.numberDisplay("#total-donations-nd");
+    var fundingStatusChart = dc.pieChart("#funding-chart");
     var fundingStatusmap = dc.geoChoroplethChart("#funding-map");
     var gradeLevelChart = dc.pieChart("#grade-level");
     var primaryFocusAreaChart = dc.pieChart("#primary-focus-area-chart");
-     var primaryFocusSubjectChart = dc.pieChart("#primary-focus-subject");
+    var primaryFocusSubjectChart = dc.pieChart("#primary-focus-subject");
 
 
 
-   selectField = dc.selectMenu('#menu-select')
+    selectField = dc.selectMenu('#menu-select')
        .dimension(stateDim)
        .group(stateGroup);
 
