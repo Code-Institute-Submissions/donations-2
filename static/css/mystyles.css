@@ -10,12 +10,12 @@
     }
 
      .chart-title {
-        background-color: black;
-         color: red;
-         font-weight:bold;
+        background-color: black !important;
+         color: red !important;
+         font-weight:bold !important;
 
     }
 
      .chart-stage {
-         background-color: purple;
+         background-color: black;
      }
