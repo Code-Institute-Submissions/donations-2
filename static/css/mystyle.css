@@ -44,10 +44,10 @@
    }
 
    .donor {
-       /*display: block;*/
-       /*margin-left: auto;*/
-       /*margin-right: auto;*/
-       float: right;
+       display: block;
+       margin-left: auto;
+       margin-right: auto;
+
    }
 
    .col-centered {
@@ -59,6 +59,7 @@
        font-size: 20px;
        text-align: center;
        color: blue;
+       float: right;
    }
 
    .intro_button {
