@@ -86,9 +86,13 @@
 
    .header h1 {
        float: right;
+       font-size: 20px;
+       color: blue;
    }
    .header img {
        position: relative;
+       left:10px;
+       top:18px;
 
    }
 
