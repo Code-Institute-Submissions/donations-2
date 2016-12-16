@@ -62,8 +62,8 @@
        float: right;
    }
 
-   .header .intro_button {
-       float: left;
+   .intro_button {
+       float: left !important;
        height: 30px;
        width:25px;
 
