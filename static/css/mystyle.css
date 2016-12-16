@@ -69,12 +69,12 @@
 
    }
 
-   .header {
-       display: inline-block;
-       background-color: yellow;
-       box-shadow: rebeccapurple;
-       text-align: center;
-       font-size: 40px;
+   /*.header {*/
+       /*display: inline-block;*/
+       /*background-color: yellow;*/
+       /*box-shadow: rebeccapurple;*/
+       /*text-align: center;*/
+       /*font-size: 40px;*/
 
    }
 
@@ -82,6 +82,14 @@
        display: block;
        margin-left: auto;
        margin-right: auto;
+   }
+
+   .header h1 {
+       float: left;
+   }
+   .header img {
+       position: relative;
+       
    }
 
 
