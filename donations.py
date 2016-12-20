@@ -26,13 +26,13 @@ FIELDS = {'funding_status': True, 'school_state': True, 'resource_type': True, '
 def index():
     return render_template("index.html")
 
-@app.route("/signup.html")
-def sign():
-    return render_template("signup.html")
-
-@app.route("/register.html")
-def register():
-    return render_template("register.html")
+# @app.route("/signup.html")
+# def sign():
+#     return render_template("signup.html")
+#
+# @app.route("/register.html")
+# def register():
+#     return render_template("register.html")
 
 
 
