@@ -16,7 +16,7 @@ DBS_NAME = 'MONGO_DB_NAME'
 # DBS_NAME = 'donorsUSA'
 # COLLECTION_NAME = 'projects'
 #DBS_NAME = os.getenv('MONGO_DB_NAME','donorsUSA')
-COLLECTION_NAME = 'Projects'
+COLLECTION_NAME = 'projects'
 FIELDS = {'funding_status': True, 'school_state': True, 'resource_type': True, 'poverty_level': True,
           'date_posted': True, 'total_donations': True,'primary_focus_area': True,'primary_focus_subject': True,'grade_level': True, '_id': False}
 
@@ -35,7 +35,7 @@ def register():
 
 
 
-@app.route("/donorsUS/Projects")
+@app.route("/donorsUS/projects")
 def donor_projects():
     # connection = MongoClient(MONGODB_HOST, MONGODB_PORT)
     connection = MongoClient(MONGODB_URI)
@@ -44,10 +44,10 @@ def donor_projects():
 
 
 
-    json_Projects = []
+    json_projects = []
     for project in Projects:
-        json_Projects.append(project)
-    json_projects = json.dumps(json_Projects)
+        json_projects.append(project)
+    json_projects = json.dumps(json_projects)
     connection.close()
     return json_projects
 
