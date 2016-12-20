@@ -35,19 +35,19 @@ def register():
 
 
 
-@app.route("/donorsUS/projects")
+@app.route("/donorsUS/Projects")
 def donor_projects():
     # connection = MongoClient(MONGODB_HOST, MONGODB_PORT)
     connection = MongoClient(MONGODB_URI)
     collection = connection[DBS_NAME][COLLECTION_NAME]
-    projects = collection.find(projection=FIELDS, limit=20000)
+    Projects = collection.find(projection=FIELDS, limit=20000)
 
 
 
-    json_projects = []
-    for project in projects:
-        json_projects.append(project)
-    json_projects = json.dumps(json_projects)
+    json_Projects = []
+    for project in Projects:
+        json_Projects.append(project)
+    json_projects = json.dumps(json_Projects)
     connection.close()
     return json_projects
 
