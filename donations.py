@@ -9,9 +9,9 @@ app = Flask(__name__)
 # MONGODB_HOST = 'localhost'
 # MONGODB_PORT = 27017
 MONGODB_URI = os.getenv('MONGODB_URI')
-# MONGODB_HOST = 'ds139187'
-# MONGODB_PORT = 39187
-DBS_NAME = 'heroku_pxh82b97'
+MONGODB_HOST = 'ds139187'
+MONGODB_PORT = 39187
+DBS_NAME = 'MONGO_DB_NAME'
 
 # DBS_NAME = 'donorsUSA'
 # COLLECTION_NAME = 'projects'
@@ -40,7 +40,10 @@ def donor_projects():
     # connection = MongoClient(MONGODB_HOST, MONGODB_PORT)
     connection = MongoClient(MONGODB_URI)
     collection = connection[DBS_NAME][COLLECTION_NAME]
-    projects = collection.find(projection=FIELDS, limit=55000)
+    projects = collection.find(projection=FIELDS, limit=20000)
+
+
+
     json_projects = []
     for project in projects:
         json_projects.append(project)
