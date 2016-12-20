@@ -9,8 +9,8 @@ app = Flask(__name__)
 # MONGODB_HOST = 'localhost'
 # MONGODB_PORT = 27017
 MONGODB_URI = os.getenv('MONGODB_URI')
-MONGODB_HOST = 'ds139187'
-MONGODB_PORT = 39187
+# MONGODB_HOST = 'ds139187'
+# MONGODB_PORT = 39187
 DBS_NAME = os.getenv('MONGO_DB_NAME', 'donorsUSA')
 COLLECTION_NAME = os.getenv('MONGO_COLLECTION_NAME', 'projects')
 
@@ -42,7 +42,7 @@ def donor_projects():
     connection = MongoClient(MONGODB_URI)
 
     collection = connection[DBS_NAME][COLLECTION_NAME]
-    projects = collection.find(projection=FIELDS, limit=20000)
+    projects = collection.find(projection=FIELDS, limit=55000)
 
 
 
