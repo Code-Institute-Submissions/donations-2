@@ -111,4 +111,6 @@
 
    }
 
-
+    .extra {
+        color: red !important;
+    }
