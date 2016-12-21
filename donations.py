@@ -9,15 +9,15 @@ app = Flask(__name__)
 # MONGODB_HOST = 'localhost'
 # MONGODB_PORT = 27017
 MONGODB_URI = os.getenv('MONGODB_URI')
-# MONGODB_HOST = 'ds139187'
-# MONGODB_PORT = 39187
-DBS_NAME = os.getenv('MONGO_DB_NAME', 'donorsUSA')
-COLLECTION_NAME = os.getenv('MONGO_COLLECTION_NAME', 'projects')
+MONGODB_HOST = 'ds139187'
+MONGODB_PORT = 39187
+# DBS_NAME = os.getenv('MONGO_DB_NAME', 'donorsUSA')
+# COLLECTION_NAME = os.getenv('MONGO_COLLECTION_NAME', 'projects')
 
 # DBS_NAME = 'donorsUSA'
 # COLLECTION_NAME = 'projects'
-#DBS_NAME = os.getenv('MONGO_DB_NAME','donorsUSA')
-# COLLECTION_NAME = 'projects'
+DBS_NAME = 'heroku_pxh82b97'
+COLLECTION_NAME = 'projects'
 FIELDS = {'funding_status': True, 'school_state': True, 'resource_type': True, 'poverty_level': True,
           'date_posted': True, 'total_donations': True,'primary_focus_area': True,'primary_focus_subject': True,'grade_level': True, '_id': False}
 
