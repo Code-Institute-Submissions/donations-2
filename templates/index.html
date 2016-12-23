@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-{#    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css">#}
+    {#    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css">#}
 
     <title>Dashboard - Dark Admin</title>
 
@@ -34,113 +34,55 @@
     <link rel="stylesheet" type="text/css" href="http://www.shieldui.com/shared/components/latest/css/light-bootstrap/all.min.css" />
     <link id="gridcss" rel="stylesheet" type="text/css" href="http://www.shieldui.com/shared/components/latest/css/dark-bootstrap/all.min.css" />
 
-{#    <script type="text/javascript" src="http://www.shieldui.com/shared/components/latest/js/shieldui-all.min.js"></script>#}
-{#    <script type="text/javascript" src="http://www.prepbootstrap.com/Content/js/gridData.js"></script>#}
-{#<style>#}
-{##}
-{#    .donor {#}
-{#        height: 120px;#}
-{#        margin: 0 auto;#}
-{#        margin-left: 50px;#}
-{#        width: 100%;#}
-{##}
-{#    }#}
-{#    .wrapper {#}
-{#        text-align: center;#}
-{#    }#}
-{##}
-
-{##}
-{#</style>#}
-
-
+    {#    <script type="text/javascript" src="http://www.shieldui.com/shared/components/latest/js/shieldui-all.min.js"></script>#}
+    {#    <script type="text/javascript" src="http://www.prepbootstrap.com/Content/js/gridData.js"></script>#}
 
 </head>
 <body>
-{#    <header id="wrapper">#}
-{#          <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">#}
-{#            <div class="navbar-header">#}
-{#                 <button class="intro_button" type="button" autofocus onclick="javascript:introJs().start();">Start Tour!</button>#}
-{#                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">#}
-{#                    <span class="sr-only">Toggle navigation</span>#}
-{#                    <span class="icon-bar"></span>#}
-{#                    <span class="icon-bar"></span>#}
-{#                    <span class="icon-bar"></span>#}
-{#                </button>#}
-{#                <a class="navbar-brand" href="index.html">Admin Panel</a>#}
-{#            </div>#}
-{#            <div class="collapse navbar-collapse navbar-ex1-collapse">#}
-{#                <ul id="active" class="nav navbar-nav side-nav">#}
-{#                    <li class="selected"><a href="index.html"><i class="fa fa-bullseye"></i> Dashboard</a></li>#}
-{#                    <li><a href="signup.html"><i class="fa fa-list-ol"></i>SignUp</a></li>#}
-{#                    <li><a href="register.html"><i class="fa fa-font"></i> Register</a></li>#}
-{##}
-{#                    #}
-{#                </ul>#}
-{##}
-{#            </div>#}
-{#        </nav>#}
-
-{#        <div id="page-wrapper">#}
-{#            <div class="row">#}
-{#                <div class="col-lg-12">#}
-
-                <div class="row">
-                    <div class="header">
-                    <h1>DASHBOARD AND GRAPHS</h1>
-                     <button class="btn-header btn-lg" type="button" autofocus onclick="javascript:introJs().start();">Start <br>Tour!</button>
-
-{#<div class="alert alert-dismissable alert-warning">#}
-{#                        <button data-dismiss="alert" class="close" type="button">&times;</button>#}
-                        <img class="donor" src="../static/Images/DonorsChoose-org-logo.png" height="100px" length="100%">
-                        <br />
-
-                      </div>
-                    </div>
 
 
-{#                </div>#}
-{#            </div>#}
+<div class="row">
+    <div class="header">
+        <h1>DASHBOARD AND GRAPHS</h1>
+        <button class="btn-header btn-lg" type="button" autofocus onclick="javascript:introJs().start();">Start <br>Tour!</button>
 
-{#        </div>#}
+        {#<div class="alert alert-dismissable alert-warning">#}
+        {#                        <button data-dismiss="alert" class="close" type="button">&times;</button>#}
+        <img class="donor" src="../static/Images/DonorsChoose-org-logo.png" height="100px" length="100%">
+        <br />
+
+    </div>
+</div>
 
 <br>
 <br>
 <br>
 
+<!-- Time Chart -->
+<div class="row">
+    <div class="col-md-6">
+        <div class="chart-wrapper">
+            <div class="chart-title">
+                <h3> Number of Donations </h3>
+            </div>
+            <div class="chart-stage map">
+
+                <div id="time-chart" data-step="1"
+                     data-intro="Number of Donations:<br><p>This graph details the number of donations made in the <br> chosen state</div></p>"
+                     style="..." data-position="right"></div>
+            </div>
+        </div>
+    </div>
+    <!-- Time Chart -->
 
 
-
-               <!-- Time Chart -->
-{#            </div>#}
-
-
-
-                  <!-- Time Chart -->
-        <div class="row">
-               <div class="col-md-6">
-                   <div class="chart-wrapper">
-                       <div class="chart-title">
-                          <h3> Number of Donations </h3>
-                       </div>
-                       <div class="chart-stage map">
-
-                           <div id="time-chart" data-step="1"
-                           data-intro="Number of Donations:<br><p>This graph details the number of donations made in the <br> chosen state</div></p>"
-                           style="..." data-position="right"></div>
-                       </div>
-                   </div>
-               </div>
-               <!-- Time Chart -->
-
-
-        <div class="col-md-6">
-         <div class="chart-wrapper">
+    <div class="col-md-6">
+        <div class="chart-wrapper">
             <div class="chart-title">
                 <h3>Total Donations by state</h3>
-                 <div id="menu-select">
+                <div id="menu-select">
 
-                   </div>
+                </div>
             </div>
             <div class="chart-stage map">
                 <div id="funding-map" data-step="2"
@@ -149,292 +91,279 @@
 
             </div>
         </div>
+    </div>
+
+    <br>
+    <br>
+    <br>
+
+</div>
+
+
+
+<div class=row">
+    <!-- Resources -->
+    <div class="col-md-4">
+        <div class="chart-wrapper">
+            <div class="chart-title">
+                <h3>Resources Type</h3>
             </div>
-
-            <br>
-            <br>
-            <br>
-
- </div>
-
-
-
-        <div class=row">
-            <!-- Resources -->
-               <div class="col-md-4">
-                   <div class="chart-wrapper">
-                       <div class="chart-title">
-                           <h3>Resources Type</h3>
-                       </div>
-                       <div class="chart-stage">
-                           <div id="resource-type-row-chart" data-step="3"
-                           data-intro="Highlights the different resources: <br><p>Graph number 3 highlights the different resources that<br> been allocated within the chosen state</p>"
-                           style="..." data-position="right"></div>
-                       </div>
-                   </div>
-               </div>
-               <!-- Resources -->
-
-                 <!-- funding Pie -->
-               <div class="col-md-4">
-                   <div class="chart-wrapper">
-                       <div class="chart-title">
-                           <h3>Funding Status</h3>
-                       </div>
-                       <div class="chart-stage">
-                           <div id="funding-chart" data-step="4"
-                           data-intro="Funding status for state:<br><p>This chart details the current funding status, whether its <br> completed or expired</p>"
-                           style="..." data-position="right"></div>
-                       </div>
-                   </div>
-               </div>
-               <!-- funding Pie -->
-
-                 <!-- Poverty -->
-                <div class="col-md-4">
-                   <div class="chart-wrapper">
-                        <div class="chart-title">
-                           <h3> Poverty Level</h3>
-                        </div>
-                    <div class="chart-stage">
-                        <div id="poverty-level-row-chart" data-step="5"
-                        data-intro="Povery levels highlighted: <br><p>This graph details the different poverty levels in the area. Levels range from moderate <br> to high levels of<br> poverty</p>"
-                        style="..." data-position="right"></div>
-                     </div>
-                 </div>
-                </div>
+            <div class="chart-stage">
+                <div id="resource-type-row-chart" data-step="3"
+                     data-intro="Highlights the different resources: <br><p>Graph number 3 highlights the different resources that<br> been allocated within the chosen state</p>"
+                     style="..." data-position="right"></div>
+            </div>
         </div>
-       <!-- Poverty -->
+    </div>
+    <!-- Resources -->
 
-        <br>
-        <br>
-        <br>
-
-                 <!-- Metric 1 -->
-                <div class="col-md-6">
-                    <div class="chart-wrapper">
-                        <div class="chart-title">
-                            <h3>Total Number of Donations</h3>
-                    </div>
-                        <div class="chart-stage total">
-                            <div id="number-projects-nd"data-step="6"
-                            data-intro="Total Number of Donations (By State):<br><p>This chart shows the total number of donations</p>"
-                            style="..." data-position="right"></div>
-                        </div>
-
-                     </div>
-                </div>
-       <!-- Metric 1 -->
-
-                 <!-- Metric 2 -->
-                <div class="col-md-6">
-                     <div class="chart-wrapper">
-                         <div class="chart-title">
-                             <h3>Total Donations in USD</h3>
-                         </div>
-                     <div class="chart-stage total">
-                            <div id="total-donations-nd" data-step="7"
-                            data-intro="Total donated in USD:<br><p>This figure represents the total amount donated in the US Dollars</p>"
-                            style="..." data-position="right"></div>
-                     </div>
-                     </div>
-              </div>
+    <!-- funding Pie -->
+    <div class="col-md-4">
+        <div class="chart-wrapper">
+            <div class="chart-title">
+                <h3>Funding Status</h3>
             </div>
-       <!-- Metric 2 -->
-
-                <!-- funding Pie -->
-        <div class="col-md-4">
-                   <div class="chart-wrapper">
-                       <div class="chart-title">
-                           <h3>Primary Focus Area</h3>
-                       </div>
-                       <div class="chart-stage">
-                              <div id="primary-focus-area-chart" data-step="8"
-                              data-intro="Primary Focus Area:<br><p>This pie-chart reperesents the primary focus area of the <br>chosen area. As shopwn there are several different areas.</p>"
-                              style="..." data-position="right"></div>
-                       </div>
-                   </div>
-               </div>
-               <!-- funding Pie -->
-
-
-        <div class="col-md-4">
-                   <div class="chart-wrapper">
-                       <div class="chart-title">
-                           <h3>Primary Focus Subject</h3>
-                       </div>
-                       <div class="chart-stage">
-                           <div id="primary-focus-subject" data-step="9"
-                           data-intro="Primary Focus Subjects:<br><p>This pie-chart shows the main subject areas within<br> the selected region</p>"
-                           style="..." data-position="right"></div>
-                       </div>
-
-                   </div>
-               </div>
-
-        <div class="styled">
-         <div class="col-md-4">
-                   <div class="chart-wrapper">
-                       <div class="chart-title">
-                           <h3>Grade Level</h3>
-                       </div>
-                       <div class="chart-stage">
-                           <div id="grade-level" data-step="10"
-                           data-intro="Grade level in area: <br><p>Finally the grade-level shows the various grade level<br> in the chosen area</p>"
-                           style="..." data-position="right"></div>
-
-                       </div>
-
-                   </div>
-               </div>
+            <div class="chart-stage">
+                <div id="funding-chart" data-step="4"
+                     data-intro="Funding status for state:<br><p>This chart details the current funding status, whether its <br> completed or expired</p>"
+                     style="..." data-position="right"></div>
             </div>
+        </div>
+    </div>
+    <!-- funding Pie -->
+
+    <!-- Poverty -->
+    <div class="col-md-4">
+        <div class="chart-wrapper">
+            <div class="chart-title">
+                <h3> Poverty Level</h3>
+            </div>
+            <div class="chart-stage">
+                <div id="poverty-level-row-chart" data-step="5"
+                     data-intro="Povery levels highlighted: <br><p>This graph details the different poverty levels in the area. Levels range from moderate <br> to high levels of<br> poverty</p>"
+                     style="..." data-position="right"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Poverty -->
+
+<br>
+<br>
+<br>
+
+<!-- Metric 1 -->
+<div class="col-md-6">
+    <div class="chart-wrapper">
+        <div class="chart-title">
+            <h3>Total Number of Donations</h3>
+        </div>
+        <div class="chart-stage total">
+            <div id="number-projects-nd"data-step="6"
+                 data-intro="Total Number of Donations (By State):<br><p>This chart shows the total number of donations</p>"
+                 style="..." data-position="right"></div>
+        </div>
+
+    </div>
+</div>
+<!-- Metric 1 -->
+
+<!-- Metric 2 -->
+<div class="col-md-6">
+    <div class="chart-wrapper">
+        <div class="chart-title">
+            <h3>Total Donations in USD</h3>
+        </div>
+        <div class="chart-stage total">
+            <div id="total-donations-nd" data-step="7"
+                 data-intro="Total donated in USD:<br><p>This figure represents the total amount donated in the US Dollars</p>"
+                 style="..." data-position="right"></div>
+        </div>
+    </div>
+</div>
+</div>
+<!-- Metric 2 -->
+
+<!-- funding Pie -->
+<div class="col-md-4">
+    <div class="chart-wrapper">
+        <div class="chart-title">
+            <h3>Primary Focus Area</h3>
+        </div>
+        <div class="chart-stage">
+            <div id="primary-focus-area-chart" data-step="8"
+                 data-intro="Primary Focus Area:<br><p>This pie-chart reperesents the primary focus area of the <br>chosen area. As shopwn there are several different areas.</p>"
+                 style="..." data-position="right"></div>
+        </div>
+    </div>
+</div>
+<!-- funding Pie -->
+
+
+<div class="col-md-4">
+    <div class="chart-wrapper">
+        <div class="chart-title">
+            <h3>Primary Focus Subject</h3>
+        </div>
+        <div class="chart-stage">
+            <div id="primary-focus-subject" data-step="9"
+                 data-intro="Primary Focus Subjects:<br><p>This pie-chart shows the main subject areas within<br> the selected region</p>"
+                 style="..." data-position="right"></div>
+        </div>
+
+    </div>
+</div>
+
+<div class="styled">
+    <div class="col-md-4">
+        <div class="chart-wrapper">
+            <div class="chart-title">
+                <h3>Grade Level</h3>
+            </div>
+            <div class="chart-stage">
+                <div id="grade-level" data-step="10"
+                     data-intro="Grade level in area: <br><p>Finally the grade-level shows the various grade level<br> in the chosen area</p>"
+                     style="..." data-position="right"></div>
+
+            </div>
+
+        </div>
+    </div>
+</div>
 
 
 
 {#    <div class="container">#}
 {#        <div class="row">#}
 {#    <div class="col-lg-12 wrapper">#}
-        <div style="text-align: center">
-             <input type="button" value="Show more" width="25%" height="30px" class="button-show btn-info btn-lg" />
-           <input type="button" value="Hide Info" width="25%" height="30px" class="button-hide btn-warning btn-lg" />
+<div style="text-align: center">
+    <input type="button" value="Show more" width="25%" height="30px" class="button-show btn-info btn-lg" />
+    <input type="button" value="Hide Info" width="25%" height="30px" class="button-hide btn-warning btn-lg" />
 
 
-        </div>
+</div>
 {#        <br>#}
 {#        <br>#}
-        <br>
-        <br>
+<br>
+<br>
 
-        <div class="row">
+<div class="row">
 
-            <div class="col-md-6 col-centered">
-                <div class="info">
-                    <img class="donor2" src="../static/Images/DonorsChoose-org-logo.png" width="100%"  height= "100px">
-                        <br>
-                        <br>
+    <div class="col-md-6 col-centered">
+        <div class="info">
+            <img class="donor2" src="../static/Images/DonorsChoose-org-logo.png" width="100%"  height= "100px">
+            <br>
+            <br>
 
-{#                    <div class="row">#}
-                    <h1 class="extra">Who we are</h1>
-                    <p>DonorsChoose.org is a United States–based nonprofit organization that allows individuals to donate directly to public school classroom projects. Founded in 2000 by former public school teacher Charles Best, DonorsChoose.org was among the first civic crowdfunding platforms of its kind. The organization has been given Charity Navigator’s highest rating every year since 2005.</p>
-                    <br>
-                    <br>
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/PUSdjfh2YjM" frameborder="0" allowfullscreen></iframe>
-                    <br>
-                    <br>
-{#                    </div>#}
+            {#                    <div class="row">#}
+            <h1 class="extra">Who we are</h1>
+            <p>DonorsChoose.org is a United States–based nonprofit organization that allows individuals to donate directly to public school classroom projects. Founded in 2000 by former public school teacher Charles Best, DonorsChoose.org was among the first civic crowdfunding platforms of its kind. The organization has been given Charity Navigator’s highest rating every year since 2005.</p>
+            <br>
+            <br>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/PUSdjfh2YjM" frameborder="0" allowfullscreen></iframe>
+            <br>
+            <br>
+            {#                    </div>#}
 
-                    <br>
-                    <h2 class="extra">What the dashboard represents</h2>
-                    <br>
-                    <p>The above dashboard highlights the work the DonorsChoose does within the US. By clicking on any part of the dashboard, it will then reflect all other graphs to show the relevant information.</p>
-                    <br>
-                    <br>
-
-
-
-                             <input type="button" value="I WOULD LIKE TO REGISTER FOR DONORSCHOOSE" class="button-register btn-info btn-lg" />
+            <br>
+            <h2 class="extra">What the dashboard represents</h2>
+            <br>
+            <p>The above dashboard highlights the work the DonorsChoose does within the US. By clicking on any part of the dashboard, it will then reflect all other graphs to show the relevant information.</p>
+            <br>
+            <br>
 
 
-                <div>
-                	<div class="row-main">
-				<div class="panel-heading">
-	               <div class="panel-title text-center">
-	               		<h1 class="donorstitle">DonorsChoose.org</h1>
-	               		<hr />
-	               	</div>
-	            </div>
-				<div class="main-login main-center">
-					<form class="form-horizontal" method="post" action="#">
 
-						<div class="form-group">
-							<label for="name" class="cols-sm-2 control-label">Your Name</label>
-							<div class="cols-sm-10">
-								<div class="input-group">
-									<span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
-									<input type="text" class="form-control" name="name" id="name"  placeholder="Enter your Name"/>
-								</div>
-							</div>
-						</div>
+            <input type="button" value="I WOULD LIKE TO REGISTER FOR DONORSCHOOSE" class="button-register btn-info btn-lg" />
 
-						<div class="form-group">
-							<label for="email" class="cols-sm-2 control-label">Your Email</label>
-							<div class="cols-sm-10">
-								<div class="input-group">
-									<span class="input-group-addon"><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
-									<input type="text" class="form-control" name="email" id="email"  placeholder="Enter your Email"/>
-								</div>
-							</div>
-						</div>
 
-						<div class="form-group">
-							<label for="username" class="cols-sm-2 control-label">Username</label>
-							<div class="cols-sm-10">
-								<div class="input-group">
-									<span class="input-group-addon"><i class="fa fa-users fa" aria-hidden="true"></i></span>
-									<input type="text" class="form-control" name="username" id="username"  placeholder="Enter your Username"/>
-								</div>
-							</div>
-						</div>
+            <div>
+                <div class="row-main">
+                    <div class="panel-heading">
+                        <div class="panel-title text-center">
+                            <h1 class="donorstitle">DonorsChoose.org</h1>
+                            <hr />
+                        </div>
+                    </div>
+                    <div class="main-login main-center">
+                        <form class="form-horizontal" method="post" action="#">
 
-						<div class="form-group">
-							<label for="password" class="cols-sm-2 control-label">Password</label>
-							<div class="cols-sm-10">
-								<div class="input-group">
-									<span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
-									<input type="password" class="form-control" name="password" id="password"  placeholder="Enter your Password"/>
-								</div>
-							</div>
-						</div>
+                            <div class="form-group">
+                                <label for="name" class="cols-sm-2 control-label">Your Name</label>
+                                <div class="cols-sm-10">
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+                                        <input type="text" class="form-control" name="name" id="name"  placeholder="Enter your Name"/>
+                                    </div>
+                                </div>
+                            </div>
 
-						<div class="form-group">
-							<label for="confirm" class="cols-sm-2 control-label">Confirm Password</label>
-							<div class="cols-sm-10">
-								<div class="input-group">
-									<span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
-									<input type="password" class="form-control" name="confirm" id="confirm"  placeholder="Confirm your Password"/>
-								</div>
-							</div>
-						</div>
+                            <div class="form-group">
+                                <label for="email" class="cols-sm-2 control-label">Your Email</label>
+                                <div class="cols-sm-10">
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
+                                        <input type="text" class="form-control" name="email" id="email"  placeholder="Enter your Email"/>
+                                    </div>
+                                </div>
+                            </div>
 
-						<div class="form-group ">
-							<button type="button" class="btn btn-primary btn-lg btn-block login-button" a href="https://help.donorschoose.org/access/unauthenticated">Register</button>
-						</div>
-{#						<div class="login-register">#}
-{#				            <a href="index.php">Login</a>#}
-{#				         </div>#}
-					</form>
-				</div>
-			</div>
-		</div>
+                            <div class="form-group">
+                                <label for="username" class="cols-sm-2 control-label">Username</label>
+                                <div class="cols-sm-10">
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><i class="fa fa-users fa" aria-hidden="true"></i></span>
+                                        <input type="text" class="form-control" name="username" id="username"  placeholder="Enter your Username"/>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="password" class="cols-sm-2 control-label">Password</label>
+                                <div class="cols-sm-10">
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+                                        <input type="password" class="form-control" name="password" id="password"  placeholder="Enter your Password"/>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="confirm" class="cols-sm-2 control-label">Confirm Password</label>
+                                <div class="cols-sm-10">
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+                                        <input type="password" class="form-control" name="confirm" id="confirm"  placeholder="Confirm your Password"/>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group ">
+                                <button type="button" class="btn btn-primary btn-lg btn-block login-button" a href="https://help.donorschoose.org/access/unauthenticated">Register</button>
+                            </div>
+                            {#						<div class="login-register">#}
+                            {#				            <a href="index.php">Login</a>#}
+                            {#				         </div>#}
+                        </form>
                     </div>
                 </div>
             </div>
-
         </div>
+    </div>
+</div>
 
-{##}
-{##}
-{##}
-{#    <div class="col-md-6 slideInLeft">#}
-{##}
-{#    </div>#}
-{##}
-{##}
-{#    </div>#}
+</div>
 
 
-
-
-
-    <script src="../static/lib/js/jquery.min.js"></script>
-    <script src="../static/lib/js/bootstrap.min.js"></script>
-    <script src="../static/lib/js/crossfilter.js"></script>
-    <script src="../static/lib/js/d3.js"></script>
-    <script src="../static/lib/js/dc.js"></script>
-    <script src="../static/lib/js/queue.js"></script>
-    <script src="../static/lib/js/keen.min.js"></script>
-    <script src='../static/js/graph.js' type='text/javascript'></script>
-    <script src="../static/lib/js/intro.js" type="text/javascript"></script>
+<script src="../static/lib/js/jquery.min.js"></script>
+<script src="../static/lib/js/bootstrap.min.js"></script>
+<script src="../static/lib/js/crossfilter.js"></script>
+<script src="../static/lib/js/d3.js"></script>
+<script src="../static/lib/js/dc.js"></script>
+<script src="../static/lib/js/queue.js"></script>
+<script src="../static/lib/js/keen.min.js"></script>
+<script src='../static/js/graph.js' type='text/javascript'></script>
+<script src="../static/lib/js/intro.js" type="text/javascript"></script>
 
 <script>
     $(".info").hide();
@@ -445,11 +374,11 @@
     });
 
     $(".button-hide").click(function () {
-       $(".info").hide();
+        $(".info").hide();
     });
 
-     $(".button-register").click(function () {
-       $(".row-main").toggle();
+    $(".button-register").click(function () {
+        $(".row-main").toggle();
     });
 
 
