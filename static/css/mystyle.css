@@ -85,8 +85,8 @@
        margin-right: auto;
    }
 
-   .header h1 {
-       float: right;
+   header h1 {
+       /*float: right;*/
        font-size: 15px;
        color: blue;
        text-align: center;
