@@ -121,3 +121,7 @@
     .extra {
         color: red !important;
     }
+
+    #info {
+        color: white;
+    }
