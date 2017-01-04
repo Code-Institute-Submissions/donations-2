@@ -89,6 +89,7 @@
        float: right;
        font-size: 15px;
        color: blue;
+       text-align: center;
    }
    .header img {
        position: relative;
