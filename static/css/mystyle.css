@@ -85,12 +85,19 @@
        margin-right: auto;
    }
 
-   header h1 {
-       /*float: right;*/
-       font-size: 15px;
-       color: blue;
-       text-align: center;
-   }
+   /*header h1 {*/
+       /*!*float: right;*!*/
+       /*font-size: 15px;*/
+       /*color: blue;*/
+       /*text-align: center;*/
+   /*}*/
+
+
+ #dashboard {
+     text-align: center;
+     font-size: 15px;
+     color: blue;
+ }
    .header img {
        position: relative;
        left:10px;
