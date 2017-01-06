@@ -94,8 +94,8 @@
 
  #dashboard {
      text-align: center !important;
-     font-size: 15px;
-     color: white;
+     font-size: 30px;
+     color: red;
  }
    .header img {
        position: relative;
